@@ -54,13 +54,6 @@
 
 ---
 
-## 🛠️ Stack Tecnológico
-
-- **Tauri**: Framework de escritorio basado en Rust.
-- **React**: Biblioteca de UI moderna.
-- **Typescript**: Código robusto y mantenible.
-- **Vite**: Herramienta de construcción ultrarrápida.
-
 ---
 
 *Hecho con ❤️ por [Oveja](https://github.com/JoelBeja2000)*
