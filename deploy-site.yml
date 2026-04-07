@@ -1,0 +1,30 @@
+name: Deploy Landing Page
+
+on:
+  push:
+    branches:
+      - main  # Cambia esto si tu rama principal tiene otro nombre
+    paths:
+      - 'landing-page/**'
+      - '.github/workflows/deploy-site.yml'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Install and Build 🔧
+        run: |
+          cd landing-page
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: landing-page/dist
+          repository-name: JoelBeja2000/OveController-Site # Cambia esto por el nombre de tu repo público
+          token: ${{ secrets.DEPLOY_TOKEN }} # Necesitarás crear este secreto
+          branch: main # O gh-pages
