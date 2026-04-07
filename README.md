@@ -54,13 +54,5 @@
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Tauri**: Rust-based desktop framework.
-- **React**: Modern UI library.
-- **Typescript**: Robust and maintainable code.
-- **Vite**: Ultra-fast build tool.
-
----
 
 *Made with ❤️ by [Oveja](https://github.com/JoelBeja2000)*
