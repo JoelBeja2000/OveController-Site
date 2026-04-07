@@ -7,6 +7,8 @@ on:
 
 jobs:
   build-and-deploy:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -21,4 +23,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          branch: gh-pages # Desplegar a la rama gh-pages
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
